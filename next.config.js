@@ -6,7 +6,9 @@ const nextConfig = {
     image: {
       unoptimized: true
     }
-  }
+  },
+  basePath:'/',
+  assetPrefix:'/'
 }
 
 
