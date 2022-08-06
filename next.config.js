@@ -7,8 +7,8 @@ const nextConfig = {
       unoptimized: true
     }
   },
-  basePath:'/',
-  assetPrefix:'/'
+  basePath:'/todo-nextjs',
+  assetPrefix:'/todo-nextjs'
 }
 
 
