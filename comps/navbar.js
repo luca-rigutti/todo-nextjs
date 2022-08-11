@@ -1,8 +1,8 @@
 function Navbar(){
     return(
-        <nav class="navbar bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Todo Nextjs (with react)</a>
+        <nav className="navbar bg-light">
+            <div className="container-fluid">
+                <a className="navbar-brand" href="#">Todo Nextjs (with react)</a>
             </div>
         </nav>
     )

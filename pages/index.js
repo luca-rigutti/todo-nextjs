@@ -20,7 +20,7 @@ export default function Home() {
       <div>
         <Navbar></Navbar>
 
-        <main class="container gap-3">
+        <main className="container gap-3">
           <Todoadd addToList={addToList}></Todoadd>
           <TodoList list={list}></TodoList>
         </main>

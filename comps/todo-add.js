@@ -10,7 +10,7 @@ function Todoadd({addToList}) {
       };
     return (
         <div>
-            <input type="text" placeholder="Note..." class="form-control" value={value} onChange={handleChange} onKeyDown={onKeyDownHandler}/>
+            <input type="text" placeholder="Note..." className="form-control" value={value} onChange={handleChange} onKeyDown={onKeyDownHandler}/>
         </div>
     )
 }
