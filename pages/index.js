@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Todoadd from '../comps/todo-add'
 import TodoList from '../comps/todo-list'
+import Navbar from '../comps/navbar'
 import { useState } from 'react'
 
 export default function Home() {
@@ -12,14 +13,19 @@ export default function Home() {
     setList([...list,childdata])
   }
   return (
-    <div className={styles.container}>
-      
+    <>
+      <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div>
+        <Navbar></Navbar>
 
-      <main className={styles.main}>
-        <Todoadd addToList={addToList}></Todoadd>
-        <TodoList list={list}></TodoList>
-      </main>
+        <main class="container gap-3">
+          <Todoadd addToList={addToList}></Todoadd>
+          <TodoList list={list}></TodoList>
+        </main>
 
-    </div>
+      </div>
+    </>
   )
 }
