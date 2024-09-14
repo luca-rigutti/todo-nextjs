@@ -17,9 +17,8 @@ function Card({title,id,description}){
                 </div>
             </div>
             </div>
-            <div className="col-md-2">
-                {id}
-                <button onClick={handleClick}>Delete</button>
+            <div className="col-md-2 ">
+                <button onClick={handleClick} className="btn btn-danger">Delete</button>
             </div>
         </div>
         

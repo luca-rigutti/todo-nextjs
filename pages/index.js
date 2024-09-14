@@ -34,9 +34,8 @@ export default function Home() {
     setList([...list,childdata])
   }
 
-  const handleCardEvent = (id) => {
-    console.log('Event from Card with id:', id);
-    // Perform actions, e.g., navigate to a detail page
+  const handleCardEvent = (id) => {    
+      setList((list) => list.filter((_, index) => index !== id));
   };
 
   return (
