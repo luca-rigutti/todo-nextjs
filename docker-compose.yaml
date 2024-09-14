@@ -3,7 +3,9 @@ services:
   nextjs-todo:
     build: .
     image: nextjs-todo-image
+    tty: true
     ports:
       - "8585:3000"
     volumes:
       - .:/code
+      - /code/node_modules
