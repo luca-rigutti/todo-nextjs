@@ -5,7 +5,7 @@ export default function TodoList({list}) {
     const names = []
     console.log(list)
     list.forEach((data,index) => {
-        names.push(<Card title={data} description="" key={index}></Card>)
+        names.push(<Card title={data} id={index} description="" key={index}></Card>)
     })
     return(
         <div>
