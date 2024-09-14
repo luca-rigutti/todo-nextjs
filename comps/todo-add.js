@@ -4,8 +4,9 @@ function Todoadd({addToList}) {
     const [value, setValue] = useState('');
     const handleChange = (e) => setValue(e.target.value);
     let onKeyDownHandler = e => {
-        if (e.keyCode === 13) {
-            addToList(value)
+        if (e.keyCode === 13 && value != "") {
+            addToList(value);
+            setValue('')
         }
       };
     return (
