@@ -3,7 +3,9 @@ import styles from '../styles/Home.module.css'
 import Todoadd from '../comps/todo-add'
 import TodoList from '../comps/todo-list'
 import Navbar from '../comps/navbar'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext } from 'react'
+
+export const EventContext = createContext();
 
 export default function Home() {
 
@@ -31,6 +33,12 @@ export default function Home() {
   const addToList = (childdata) => {
     setList([...list,childdata])
   }
+
+  const handleCardEvent = (id) => {
+    console.log('Event from Card with id:', id);
+    // Perform actions, e.g., navigate to a detail page
+  };
+
   return (
     <>
       <Head>
@@ -38,12 +46,12 @@ export default function Home() {
       </Head>
       <div>
         <Navbar></Navbar>
-
+        <EventContext.Provider value={handleCardEvent}>
         <main className="container gap-3">
           <Todoadd addToList={addToList}></Todoadd>
           <TodoList list={list}></TodoList>
         </main>
-
+        </EventContext.Provider>
       </div>
     </>
   )
